@@ -11,6 +11,7 @@
   --modal-color: #2e2f42;
   --hero-bg-color: #2e2f42;
   --hero-txt-color: #fff;
+  --customers-logo-color: #afb1b8;
 }
 /* common style */
 
@@ -113,6 +114,8 @@ img {
 .filter-btn:focus {
   background-color: var(--presed-link-color);
   color: var(--hero-txt-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* header style*/
 .header {
@@ -178,11 +181,23 @@ img {
 
 .section {
   padding: 120px 0;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* main style */
 .section-hero {
   background-color: var(--hero-bg-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/hero/people-office.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -222,6 +237,17 @@ img {
 
 .features-list {
   display: flex;
+}
+
+.features-desc-icon {
+  display: flex;
+  padding: 24px 100px;
+  background-color: var(--light-theme-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.features-icon {
 }
 
 .features-item:not(:last-child) {
@@ -297,9 +323,67 @@ img {
 
 .team-desc {
   text-align: center;
+  margin-bottom: 8px;
 }
 .card-container {
   padding: 32px 0;
+}
+
+.team-social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.team-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-link-color);
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--presed-link-color);
+}
+.team-social-item {
+}
+.team-social-icon {
+  fill: var(--light-theme-color);
+}
+
+.customers-title {
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.customer-logo {
+  fill: var(--sub-txt-color);
+}
+
+.customer-logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  border: 1px solid var(--sub-txt-color);
+  border-radius: 4px;
+}
+
+.customer-logo-link:hover .customer-logo,
+.customer-logo-link:focus .customer-logo,
+.customer-logo-link:hover,
+.customer-logo-link:focus {
+  fill: var(--presed-link-color);
+  border-color: var(--presed-link-color);
 }
 
 /* Projects-style */
@@ -331,7 +415,14 @@ img {
   gap: var(--column-indent) var(--row-indent);
 }
 .project-item {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   flex-basis: calc((100% - var(--row-indent) * 2) / var(--items)-30px);
+}
+
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-subtitle {
@@ -344,14 +435,18 @@ img {
   padding-bottom: 32px;
   padding-left: 16px;
 }
-
 /* footer style */
 .footer {
   background-color: var(--dark-theme-color);
 }
 .footer-container {
+  display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.footer-left-side {
+  margin-right: 120px;
 }
 .footer-nav-logo,
 .footer-nav-logo:hover,
@@ -371,4 +466,34 @@ img {
 .footer-desc {
   color: var(--accent-color);
   width: 264px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.footer-social-desc {
+  color: var(--hero-txt-color);
+  margin-bottom: 16px;
+}
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--success-action-color);
+}
+
+.footer-social-icon {
+  fill: var(--light-theme-color);
 }
